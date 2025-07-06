@@ -26,8 +26,11 @@ asyncio.run(load())
 temp = rh.weather.temperature()
 
 while True:
-  rh.weather.update()
-  rh.display.print_float(temp)
-  rh.display.show()
-  time.sleep(.5)
-  rh.display.clear()
+  try:
+   rh.weather.update()
+   rh.display.print_float(temp)
+   rh.display.show()
+   time.sleep(.5)
+   rh.display.clear()
+  except Exception as e:
+    print(e)
