@@ -17,14 +17,14 @@ async def song():
 
   rh.buzzer.midi_note(40,2)
 
-song()
+asyncio.run(song())
 time.sleep(9.3)
-load()
+asyncio.run(load())
 
 temp = rh.weather.temperature()
 
 while True:
-  rh.temperature.update()
+  rh.weather.update()
   rh.display.clear()
   rh.display.print_float(temp)
   rh.display.show()
