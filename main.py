@@ -9,6 +9,8 @@ async def load():
     rh.rainbow.show()
     await asyncio.sleep(0.1)
 
+  rh.rainbow.clear
+
 async def song():
   song = [68,68,69,69,70,70,71,71]
   for note in song:
